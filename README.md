@@ -1,4 +1,4 @@
-**# 🛍️ Online Shopping Customer Behaviour Analysis
+# 🛍️ Online Shopping Customer Behaviour Analysis
 
 An end-to-end data analytics project that explores **how customers shop online and what influences their spending**. The project covers data cleaning and EDA in **Python**, business analysis in **SQL**, and an interactive dashboard in **Power BI**.
 
@@ -6,7 +6,7 @@ An end-to-end data analytics project that explores **how customers shop online a
 
 ## 📊 Dashboard Preview
 
-![Customer Shopping Behaviour Dashboard](DASHBOARD%20PREVIEW.jpeg)
+![Customer Shopping Behaviour Dashboard](dashboard_preview.jpeg)
 
 ---
 
@@ -22,7 +22,9 @@ Understanding customer behaviour helps an online store decide which products to 
 | Columns | 10 |
 | Missing values | None |
 | Duplicate records | None |
+| Total spending | $1,401,306 |
 | Average spend per customer | ~$778 (range $5 to $1,499) |
+| Average time spent on the platform | ~60.5 minutes |
 
 ---
 
@@ -73,7 +75,7 @@ Understanding customer behaviour helps an online store decide which products to 
 | `CLEANED CUSTOMER SHOPPING BEHAVIOUR.csv` | Cleaned dataset used for SQL and Power BI |
 | `SQL QUERIES.sql` | SQL queries for category, country, gender, device, age group and customer analysis |
 | `CUSTOMER SHOPPING BEHAVIOUR.pbix` | Interactive Power BI dashboard |
-| `DASHBOARD PREVIEW.jpeg` | Screenshot of the dashboard |
+| `dashboard_preview.jpeg` | Screenshot of the dashboard |
 | `README.md` | Project documentation |
 
 ---
@@ -103,7 +105,10 @@ Queries written to answer questions such as:
 - Who are the top 3 spenders in each country?
 
 ### 3. Dashboard (Power BI)
-An interactive dashboard that visualises customer spending across product categories, countries, devices, genders and age groups.
+An interactive one-page dashboard titled **"Customer Shopping Behaviour"**.
+- **Filters:** gender, age group, country, device type and product category
+- **KPI cards:** Total Customers (1.8K), Total Purchased (8K items), Total Spending ($1,401,306) and Average Time Spent (60.54 minutes)
+- **Charts:** top 5 product categories by average spending, spending by country, gender-wise purchase behaviour, device-wise spending share, average spending by age group, and top 10 customers by spending
 
 ---
 
@@ -116,13 +121,15 @@ An interactive dashboard that visualises customer spending across product catego
 - **Spending:** The average customer spends about **$778**, with a median of **$802**.
 - **Weak correlations:** Total spending shows almost **no correlation** with age, time spent, items viewed or items purchased (all between 0.01 and 0.03). Spending more time on the platform or viewing more items does not by itself mean a customer spends more.
 
-**From the SQL analysis and dashboard**
-- **Category spending:** `[ADD: category with the highest average spending]`
-- **Countries:** `[ADD: country with the highest total spending]`
-- **Device:** `[ADD: device with the highest average spending]`
-- **Gender:** `[ADD: difference in average spending and items purchased]`
-- **Age group:** `[ADD: age group with the highest average spending]`
-- **Spending segments:** `[ADD: share of High / Medium / Low spenders]`
+**From the Power BI dashboard**
+- **Overall:** 1.8K customers generated a total spending of **$1,401,306** and purchased about 8K items, with customers spending around **60.5 minutes** on the platform on average.
+- **Category spending:** **Clothing** has the highest average spending, followed by Electronics, Beauty, Sports and Home. **Books** falls outside the top 5. The bars are close in height, so the gap between categories is small.
+- **Countries:** **Pakistan** has the highest total spending, followed by USA, Canada, Australia, UK and India. Pakistan also has the most customers (330), so part of its lead comes from having a bigger customer base.
+- **Gender:** Male and female customers purchase almost the same number of items on average, with male customers slightly ahead.
+- **Devices:** Spending is split almost evenly across devices: **Tablet 36.13%**, **Desktop 32.75%** and **Mobile 31.12%**.
+- **Age groups:** Average spending is lowest for customers **below 25**, rises to a peak around the **35-44** group and dips slightly for **45 and above**. The difference between age groups is small (roughly $740 to $785).
+- **Top customers:** The top 10 customers (for example CUST_1326, CUST_922 and CUST_537) all spent close to the maximum of about $1,500.
+- **Spending segments (SQL):** `[ADD: share of High / Medium / Low spenders]`
 
 ---
 
@@ -131,10 +138,10 @@ An interactive dashboard that visualises customer spending across product catego
 > Based on the insights above, the business can consider the following actions. Keep the points that your results support and remove the rest.
 
 1. **Do not rely on time spent or items viewed alone.** Since they show almost no link with spending, use other signals such as product category, device and country to decide where to focus.
-2. **Promote strong categories and support weaker ones.** Keep stock and marketing strong for popular categories like Clothing, and run offers on the least popular ones such as Home.
+2. **Promote strong categories and support weaker ones.** Clothing is the most popular category and also has the highest average spending, so keep stock and marketing strong there. Run offers on Home (fewest customers) and Books (outside the top 5 for average spending).
 3. **Target "window shoppers".** Customers who view many items but buy very little can be reached with reminders, discounts or an easier checkout.
 4. **Reward high spenders.** Use the High / Medium / Low segmentation to offer loyalty benefits to top customers and upgrade offers to the medium group.
-5. **Focus on the best markets and devices.** Invest more in the countries and devices that bring in the highest spending, and improve the experience on the weaker ones.
+5. **Focus on the best markets and devices.** Pakistan and USA bring in the most spending, so keep investing there and look for ways to grow weaker markets like India. Since spending is split almost evenly across Tablet, Desktop and Mobile, keep the shopping experience equally smooth on all three.
 6. **Track results regularly.** Use the Power BI dashboard to monitor spending by category, country and device over time.
 
 ---
@@ -143,7 +150,7 @@ An interactive dashboard that visualises customer spending across product catego
 
 This project analysed **1,800 online shopping customers** across 10 columns. The data was clean, with no missing values or duplicates. Customers were spread fairly evenly across six product categories, with Clothing the most popular, and the average customer spent about $778.
 
-The most notable finding is that **age, time spent, items viewed and items purchased have almost no correlation with total spending**, so simple behaviour numbers do not explain how much a customer spends. `[ADD: one line on the key finding from your SQL / dashboard results]`
+The most notable finding is that **age, time spent, items viewed and items purchased have almost no correlation with total spending**, so simple behaviour numbers do not explain how much a customer spends. The dashboard shows that Clothing has the highest average spending and Pakistan the highest total spending, while differences across devices, genders and age groups are small.
 
 Using **Python** for EDA, **SQL** for business analysis and **Power BI** for visualisation, the project gives a clear view of customer behaviour that can guide marketing, product and customer-targeting decisions.
 
@@ -173,4 +180,4 @@ This project is part of my data analytics portfolio, where I practise the full w
 
 ---
 
-⭐ If you found this project useful, feel free to star the repository!**
+⭐ If you found this project useful, feel free to star the repository!
