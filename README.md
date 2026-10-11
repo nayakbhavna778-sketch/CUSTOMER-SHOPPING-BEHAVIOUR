@@ -6,7 +6,7 @@ An end-to-end data analytics project that explores **how customers shop online a
 
 ## 📊 Dashboard Preview
 
-![Customer Shopping Behaviour Dashboard](dashboard_preview.jpeg)
+![Customer Shopping Behaviour Dashboard](dashboard%20preview.jpeg)
 
 ---
 
@@ -75,7 +75,7 @@ Understanding customer behaviour helps an online store decide which products to 
 | `CLEANED CUSTOMER SHOPPING BEHAVIOUR.csv` | Cleaned dataset used for SQL and Power BI |
 | `SQL QUERIES.sql` | SQL queries for category, country, gender, device, age group and customer analysis |
 | `CUSTOMER SHOPPING BEHAVIOUR.pbix` | Interactive Power BI dashboard |
-| `dashboard_preview.jpeg` | Screenshot of the dashboard |
+| `dashboard preview.jpeg` | Screenshot of the dashboard |
 | `README.md` | Project documentation |
 
 ---
